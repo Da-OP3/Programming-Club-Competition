@@ -34,8 +34,16 @@ public class readOnlyGameState {
     public int getOpponentPreviousBet(){
         return opponentBet;
     }
+
+    /**
+     * 
+     * @return A size-2 array of ArrayLists, each of which have an entry per round with the player's bet.
+     */
     public ArrayList<Integer>[] getFullState(){
-        return state;
+        ArrayList<Integer>[] copy = state.clone();
+        copy[0] = new ArrayList<>(state[0]);
+        copy[1] = new ArrayList<>(state[1]);
+        return copy;
     }
 
 }

@@ -27,7 +27,7 @@ public class gameState {
         state2[0] = state[1];
         state2[1] = state[0];
 
-        return new readOnlyGameState(p2Tokens, p1Tokens, currentRound, p2bet, p1bet, state);
+        return new readOnlyGameState(p2Tokens, p1Tokens, currentRound, p2bet, p1bet, state2);
     }
 
     /**

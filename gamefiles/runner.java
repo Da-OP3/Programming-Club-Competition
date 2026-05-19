@@ -36,7 +36,7 @@ public class runner {
 
             int bet1 = p1.getBet(rg1);
             System.out.println("Player 1 bet request: " + bet1 + " (available=" + rg1.getMyTokens() + ")");
-            if (bet1 <= 0 || (bet1 < 5 && rg1.getMyTokens() > 5) || bet1 > rg1.getMyTokens()){
+            if (bet1 <= 0 || (bet1 < 5 && rg1.getMyTokens() >= 5) || bet1 > rg1.getMyTokens()){
                 g.p1Tokens = -1;
                 System.out.println("Player 1 invalid bet: " + bet1 + " -> eliminated");
             } else {
@@ -46,7 +46,7 @@ public class runner {
 
             int bet2 = p2.getBet(rg2);
             System.out.println("Player 2 bet request: " + bet2 + " (available=" + rg2.getMyTokens() + ")");
-            if (bet2 <= 0 || (bet2 < 5 && rg2.getMyTokens() > 5) || bet2 > rg2.getMyTokens()){
+            if (bet2 <= 0 || (bet2 < 5 && rg2.getMyTokens() >= 5) || bet2 > rg2.getMyTokens()){
                 g.p2Tokens = -1;
                 System.out.println("Player 2 invalid bet: " + bet2 + " -> eliminated");
             } else {
